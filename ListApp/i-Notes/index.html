@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>i-Notes</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <style>
+      .logout-button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          background-color: #3d5af1;
+          color: #fff;
+          width: 120px;
+          height: 40px;
+          border-radius: 20px;
+          font-size: 16px;
+          font-weight: bold;
+          text-transform: uppercase;
+          cursor: pointer;
+      }
+
+      .logout-button:hover {
+          background-color: #2c48d8;
+      }
+  </style>
+</head>
+
+<body>
+    <div class="popup-box">
+        <div class="popup">
+            <div class="content">
+                <header>
+                    <p></p>
+                    <i class="uil uil-times"></i>
+                </header>
+                <form action="#">
+                    <div class="row title">
+                        <label>Title</label>
+                        <input type="text" spellcheck="false">
+                    </div>
+                    <div class="row description">
+                        <label>Description</label>
+                        <textarea spellcheck="false"></textarea>
+                    </div>
+                    <div class="addTask">
+                    <button>Add button</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <li class="add-box">
+            <div class="icon"><i class="uil uil-plus"></i></div>
+            <p>Add new note</p>
+        </li>
+    </div>
+
+    <button class="logout-button" onclick="logout()">Logout</button>
+
+    <script src="script.js"></script>
+    <script>
+        function logout() {
+            // Add your logout logic here
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+
+</html>
+

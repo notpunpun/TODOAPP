@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to ToDOApp:D</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" >
+<style>
+  body {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(139deg,#03ddffcb 0%,#ea6babd3 90%);
+  color: white;
+  font-size: 1.5rem;
+}
+.button-container {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+    }
+.button {
+      background-color: lightblue;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 20px;
+    }
+.pencil {
+  position: relative;
+  width: 300px;
+  height: 40px;
+  transform-origin: center;
+  transform: rotate(135deg);
+  animation: pencil-animation 10s infinite;
+}
+@keyframes pencil-animation {
+  0% {
+    transform: rotate(135deg);
+  }
+  20% {
+    transform: rotate(315deg);
+  }
+  45% {
+    transform: translateX(300px) rotate(315deg);
+  }
+  55% {
+    transform: translateX(300px) rotate(495deg);
+  }
+  100% {
+    transform: rotate(495deg);
+  }
+}
+.pencil__ball-point {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #824AAB;
+  height: 10px;
+  width: 10px;
+  border-radius: 50px;
+}
+.pencil__cap {
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  clip-path: polygon(20% 40%, 100% 0%, 100% 100%, 20% 60%);
+  background: #232123;
+  width: 12%;
+  height: 100%;
+}
+.pencil__cap-base {
+  position: absolute;
+  left: 12%;
+  top: 0;
+  height: 100%;
+  width: 20px;
+  background: #232123;
+}
+.pencil__middle {
+  position: absolute;
+  left: calc(12% + 20px);
+  top: 0;
+  height: 100%;
+  width: 70%;
+  background: #824AAB;
+}
+.pencil__eraser {
+  position: absolute;
+  left: calc(12% + 70% + 20px);
+  top: 0;
+  height: 100%;
+  width: 11%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: #232123;
+}
+
+.line {
+  position: relative;
+  top: 80px;
+  right: 103px;
+  height: 10px;
+  width: 1000px;
+  z-index: -1;
+  border-radius: 50px;
+  background: #824AAB;
+  transform: scaleX(0);
+  transform-origin: center;
+  animation: line-animation 10s infinite;
+}
+@keyframes line-animation {
+  20% {
+    transform: scaleX(0);
+  }
+  45% {
+    transform: scaleX(0.6);
+  }
+  55% {
+    transform: scaleX(0.6);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+h2 {
+  position: relative;
+  top: 150px;
+  right: 75px;
+}
+</style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="pencil">
+  <div class="pencil__ball-point"></div>
+  <div class="pencil__cap"></div>
+  <div class="pencil__cap-base"></div>
+  <div class="pencil__middle"></div>
+  <div class="pencil__eraser"></div>
+</div>
+<div class="line"></div>
+<h2>Welcome to To-Do-List. </h2>
+<h2>Write your day here...</h2>
+<!-- partial -->
+<div class="button-container">
+<a href="main.html" class="button">lesgo</a>
+</body>
+</html>
